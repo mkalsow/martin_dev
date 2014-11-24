@@ -8,3 +8,5 @@ build/tmp/war/MANIFEST.MF
 *.class
 
 .idea
+
+.gradle/2.2
