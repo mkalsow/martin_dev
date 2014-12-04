@@ -1,25 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-    <title>jQuery Hello World</title>
-
-    <script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
-
+    <script type="text/javascript" src="./scripts/sugar.js"></script>
+    <script type="text/javascript" src="./scripts/jquery-1.7.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
 </head>
-
 <body>
-
-<script type="text/javascript">
- 
-$(document).ready(function(){
- $("#msgid").html("This is Hello World by JQuery");
-});
- 
-</script>
-
-This is Hello World by HTML
-
-<div id="msgid">
-</div>
-
+<div id="doc">
+    <div id="hd">
+        Header/Navigation goes here
+    </div>
+    <div id="mainContent" class="content">
+        <div id="app" role="application">
+            This is the content area
+        </div>
+    </div>
+    <div id="ft">
+        Footer goes here
+    </div>
 </body>
-</html>
+</html> 

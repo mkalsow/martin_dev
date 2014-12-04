@@ -19,7 +19,21 @@ public class HelloWorldController {
         return mav;
     }
 
-    //jquery
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public ModelAndView index() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("index");
+
+        String str = "Hello World!";
+        mav.addObject("message", str);
+
+        return mav;
+    }
+
+
+    //hübsch machen mit meinen Sachen!!
+    //reponsive machen
     //sass
     //susy grid
  
