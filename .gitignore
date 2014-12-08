@@ -10,3 +10,7 @@ build/tmp/war/MANIFEST.MF
 .idea
 
 .gradle/2.2
+
+.jruby/gems
+
+.sass-cache

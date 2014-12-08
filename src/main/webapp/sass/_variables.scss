@@ -1,0 +1,59 @@
+/**
+ * Font Size Definition
+ */
+    $font75: (font-size: 12px, line-height: 18px);
+    $font100: (font-size: 14px, line-height: 20px);
+    $font125: (font-size: 16px, line-height: 22px);
+    $font150: (font-size: 18px, line-height: 24px);
+    $font175: (font-size: 20px, line-height: 26px);
+    $font200: (font-size: 22px, line-height: 28px);
+    $font225: (font-size: 24px, line-height: 30px);
+    $font250: (font-size: 26px, line-height: 32px);
+    $font275: (font-size: 28px, line-height: 34px);
+    $font300: (font-size: 30px, line-height: 36px);
+    $font325: (font-size: 32px, line-height: 38px);
+    $font350: (font-size: 34px, line-height: 40px);
+
+/**
+ * Font Family Definition
+ */
+    $fallbackFontFamily:        "Arial", "Helvetica", sans-serif;
+    $sansFontFamily:            "OTTOSans", $fallbackFontFamily;
+    $sansThinFontFamily:        "OttoSansThin", $fallbackFontFamily;
+    $iconFontFamily:            "OttoIconFonts", $fallbackFontFamily;
+
+/**
+ * Color Definition
+ */
+
+//  Grey Scale
+    $black:                     #000;
+    $white:                     #fff;
+
+    $grey25:                    #F8F7F5;
+    $grey50:                    #F2F0EB;
+    $grey100:                   #ECE9E2;
+    $grey200:                   #CEC4BB;
+    $grey300:                   #A89E95;
+    $grey400:                   #867976;
+
+    $black50:                   #3d3636;
+    $black100:                  #222222;
+
+//  Accent Colors
+    $red100:                    #D52B1E;
+    $red200:                    #C12317;
+    $disabled-color:            #CCCCCC;
+    $error-background-color:    #FAD6D0;
+    $error-font-color:          #7F1400;
+    $warning-background-color:  #FFEFB0;
+    $warning-border-color:      #FFD387;
+    $warning-font-color:        $black100;
+    $hint-background-color:     #D1E2F0;
+    $hint-font-color:           #045371;
+    $success-background-color:  #E4ECB9;
+    $success-font-color:        #3E520B;
+
+    $availability-green:        #198504;
+    $availability-orange:       #EE9201;
+    $availability-red:          #DA2031;

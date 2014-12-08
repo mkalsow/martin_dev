@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var options = {
         autoPlay: true,
+        autoPlayDelay: 2000,
         nextButton: true,
         prevButton: true,
         preloader: true,

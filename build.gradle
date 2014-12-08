@@ -4,10 +4,12 @@ buildscript {
         mavenCentral()
         maven { url "http://repo.spring.io/snapshot" }
         maven { url "http://repo.spring.io/milestone" }
+        maven { url 'http://dl.bintray.com/robfletcher/gradle-plugins' }
     }
     dependencies {
         //Required dependency for spring-boot plugin
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE'
+        classpath 'org.gradle.plugins:gradle-compass:1.0.10'
     }
 }
 
@@ -15,6 +17,7 @@ apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'spring-boot'
+apply plugin: 'compass'
 
 sourceCompatibility = 1.7
 version = '1.0'
@@ -22,7 +25,7 @@ version = '1.0'
 
 war {
     baseName = 'martin_dev'
-    version =  '0.1'
+    version = '0.1'
 }
 
 repositories {
@@ -36,3 +39,16 @@ dependencies {
     //Required dependency for JSP
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
 }
+
+compass {
+    cssDir = file('src/main/webapp/generatedCss')
+    sassDir = file('src/main/webapp/sass')
+
+    gems = ["compass:1.0.0.alpha.18", "susy", "breakpoint"]
+    outputStyle = "expanded"
+    debugInfo = false
+    noLineComments = true
+}
+
+processResources.inputs.files compileSass
+clean.dependsOn cleanCompileSass

@@ -1,0 +1,23 @@
+$breakpoint-no-query-fallbacks: true;
+
+$susy: (
+  columns: 6,
+  container: 1152px,
+  gutter-position: inside,
+  gutters: 0,
+);
+
+$medium-width: 28em;
+$medium-cols: 6;
+$breakpoint-medium: $medium-width, $medium-cols;
+$breakpoint-medium-no-mq: $medium-width, $medium-cols, '.no-mq';
+
+$large-width: 48em;
+$large-cols: 12;
+$breakpoint-large: $large-width, $large-cols;
+$breakpoint-large-no-mq: $large-width, $large-cols, '.no-mq';
+
+$extra-large-width: 62em;
+$extra-large-cols: 12;
+$breakpoint-extra-large: $extra-large-width, $extra-large-cols;
+$breakpoint-extra-large-no-mq: $extra-large-width, $extra-large-cols, '.no-mq';
