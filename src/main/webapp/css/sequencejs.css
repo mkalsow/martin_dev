@@ -28,15 +28,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-   background-color:yellow;
-}
-
- @media all and (max-width: 699px) and (min-width: 300px), (min-width: 500px)
-body {
-  line-height: 1;
    background-color:white;
 }
-     }
 
 ol, ul {
   list-style: none;
@@ -108,7 +101,7 @@ table {
   transition-duration: 0.4s;
 }
 #sequence .sequence-prev {
-  left: 40px;
+  right: 100px;
 }
 #sequence .sequence-next {
   right: 40px;
@@ -301,4 +294,24 @@ table {
   -o-transition-duration: 4s;
   transition-duration: 4s;
 }
+
+/* Social Media Icons
+----------------------------------------------- */
+#sequence .socialIcons{
+ top: 500px;
+  right: 100px;
+}
+
+
+#sequence .socialIcon {
+margin-right: 10px;
+ opacity: 0.4;
+}
+
+#sequence .socialIcon:hover {
+opacity: .8;
+filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+
+
 
