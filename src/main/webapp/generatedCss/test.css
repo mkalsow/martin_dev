@@ -1,5 +1,258 @@
-.shadow {
-  -moz-box-shadow: #000 5px 5px 5px;
-  -webkit-box-shadow: #000 5px 5px 5px;
-  box-shadow: #000 5px 5px 5px;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+#sequence .sequence-next, #sequence .sequence-prev {
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 120px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0.4;
+  top: 280px;
+  height: 50px;
+  width: 48px;
+  z-index: 20;
+  transition-duration: 0.4s;
+}
+
+#sequence .sequence-next:hover, #sequence .sequence-prev:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition-duration: 0.4s;
+}
+
+body {
+  line-height: 1;
+  background-color: white;
+}
+
+blockquote {
+  quotes: none;
+}
+blockquote:before {
+  content: '';
+  content: none;
+}
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+q {
+  quotes: none;
+}
+q:before {
+  content: '';
+  content: none;
+}
+q:after {
+  content: '';
+  content: none;
+}
+
+ol {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article {
+  display: block;
+}
+
+aside {
+  display: block;
+}
+
+details {
+  display: block;
+}
+
+figure {
+  display: block;
+}
+
+figcaption {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+header {
+  display: block;
+}
+
+hgroup {
+  display: block;
+}
+
+menu {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+#sequence {
+  position: relative;
+  min-height: 600px;
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: Play, sans-serif;
+}
+#sequence .sequence-next {
+  right: 40px;
+}
+#sequence .sequence-prev {
+  right: 100px;
+}
+#sequence h2 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+#sequence .info {
+  color: black;
+  font-size: 1em;
+  right: 150%;
+  line-height: 1.2em;
+  top: 170px;
+  width: 50%;
+  z-index: 10;
+  vertical-align: middle;
+  transition-duration: 4s;
+  transition-property: right;
+}
+#sequence .animate-in .info {
+  right: 15%;
+  transition-duration: 4s;
+}
+#sequence .animate-in .info_thinking {
+  right: 15%;
+  transition-duration: 4s;
+}
+#sequence .animate-in .info_thinking_content {
+  right: 15%;
+  transition-duration: 4s;
+}
+#sequence .animate-in .me {
+  left: 10%;
+  top: 70px;
+  transition-duration: 4s;
+  z-index: 4;
+}
+#sequence .animate-in .me_thinking {
+  left: 3%;
+  top: 70px;
+  transition-duration: 4s;
+  z-index: 4;
+}
+#sequence .animate-out .info {
+  right: -150%;
+  transition-duration: 4s;
+}
+#sequence .animate-out .info_thinking {
+  right: -150%;
+  transition-duration: 4s;
+}
+#sequence .animate-out .info_thinking_content {
+  right: -150%;
+  transition-duration: 4s;
+}
+#sequence .animate-out .me {
+  left: 140%;
+  top: -30px;
+  z-index: 2;
+  transition-duration: 4s;
+}
+#sequence .animate-out .me_thinking {
+  left: 140%;
+  top: -30px;
+  z-index: 2;
+  transition-duration: 4s;
+}
+#sequence .info_thinking {
+  color: blue;
+  font-size: 1em;
+  right: 150%;
+  line-height: 1.2em;
+  top: 170px;
+  width: 80%;
+  z-index: 10;
+  vertical-align: middle;
+  transition-duration: 4s;
+  transition-property: right;
+}
+#sequence .info_thinking_content {
+  color: black;
+  font-size: 1em;
+  right: 150%;
+  line-height: 1.2em;
+  top: 200px;
+  width: 40%;
+  z-index: 10;
+  vertical-align: middle;
+  transition-duration: 4s;
+  transition-property: right;
+}
+#sequence .me {
+  left: -140%;
+  top: 200px;
+  max-width: 23%;
+  z-index: 6;
+  transition-property: left top;
+}
+#sequence .me_thinking {
+  left: -80%;
+  top: 200px;
+  max-width: 50%;
+  z-index: 6;
+  transition-property: left top;
+}
+#sequence .socialIcons {
+  padding-top: 90px;
+}
+#sequence .socialIcon {
+  margin-right: 10px;
+  opacity: 0.4;
+}
+#sequence .socialIcon:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+}
+#sequence > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+}
+#sequence > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#sequence > .sequence-canvas li > * {
+  position: absolute;
+  transition-timing-function: ease-in-out;
 }

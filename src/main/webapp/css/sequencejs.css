@@ -298,8 +298,7 @@ table {
 /* Social Media Icons
 ----------------------------------------------- */
 #sequence .socialIcons{
- top: 500px;
-  right: 100px;
+ padding-top: 90px;
 }
 
 

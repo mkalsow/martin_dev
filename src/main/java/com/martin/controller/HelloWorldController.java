@@ -31,6 +31,17 @@ public class HelloWorldController {
         return mav;
     }
 
+    @RequestMapping(value = "/index2", method = RequestMethod.GET)
+    public ModelAndView index2() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("index_test");
+
+        String str = "Hello World!";
+        mav.addObject("message", str);
+
+        return mav;
+    }
+
 
     //hübsch machen mit meinen Sachen!!
     //reponsive machen

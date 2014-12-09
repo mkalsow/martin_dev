@@ -1,5 +1,501 @@
-@import 'compass/css3';
+//colors
+$white: white;
+$black: black;
+$color_blue_approx: blue;
 
-.shadow {
-    @include box-shadow(#000 5px 5px 5px);
+//fonts
+$font_0: Play;
+$font_1: sans-serif;
+
+//@extend-elements
+//original selectors
+//html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+%extend_1 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+//original selectors
+//#sequence .sequence-next, #sequence .sequence-prev
+%extend_2 {
+	color: $white;
+	cursor: pointer;
+	display: none;
+	font-size: 120px;
+	font-weight: bold;
+	position: absolute;
+	opacity: 0.4;
+	top: 280px;
+	height: 50px;
+	width: 48px;
+	z-index: 20;
+	//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 0.4s;
+}
+
+//original selectors
+//#sequence .sequence-next:hover, #sequence .sequence-prev:hover
+%extend_3 {
+	opacity: 1;
+	//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: scale(1.2);
+	//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 0.4s;
+}
+
+
+html {
+	@extend %extend_1;
+}
+body {
+	@extend %extend_1;
+	line-height: 1;
+	background-color: $white;
+}
+div {
+	@extend %extend_1;
+}
+span {
+	@extend %extend_1;
+}
+applet {
+	@extend %extend_1;
+}
+object {
+	@extend %extend_1;
+}
+iframe {
+	@extend %extend_1;
+}
+h1 {
+	@extend %extend_1;
+}
+h2 {
+	@extend %extend_1;
+}
+h3 {
+	@extend %extend_1;
+}
+h4 {
+	@extend %extend_1;
+}
+h5 {
+	@extend %extend_1;
+}
+h6 {
+	@extend %extend_1;
+}
+p {
+	@extend %extend_1;
+}
+blockquote {
+	@extend %extend_1;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+pre {
+	@extend %extend_1;
+}
+a {
+	@extend %extend_1;
+}
+abbr {
+	@extend %extend_1;
+}
+acronym {
+	@extend %extend_1;
+}
+address {
+	@extend %extend_1;
+}
+big {
+	@extend %extend_1;
+}
+cite {
+	@extend %extend_1;
+}
+code {
+	@extend %extend_1;
+}
+del {
+	@extend %extend_1;
+}
+dfn {
+	@extend %extend_1;
+}
+em {
+	@extend %extend_1;
+}
+img {
+	@extend %extend_1;
+}
+ins {
+	@extend %extend_1;
+}
+kbd {
+	@extend %extend_1;
+}
+q {
+	@extend %extend_1;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+s {
+	@extend %extend_1;
+}
+samp {
+	@extend %extend_1;
+}
+small {
+	@extend %extend_1;
+}
+strike {
+	@extend %extend_1;
+}
+strong {
+	@extend %extend_1;
+}
+sub {
+	@extend %extend_1;
+}
+sup {
+	@extend %extend_1;
+}
+tt {
+	@extend %extend_1;
+}
+var {
+	@extend %extend_1;
+}
+b {
+	@extend %extend_1;
+}
+u {
+	@extend %extend_1;
+}
+i {
+	@extend %extend_1;
+}
+center {
+	@extend %extend_1;
+}
+dl {
+	@extend %extend_1;
+}
+dt {
+	@extend %extend_1;
+}
+dd {
+	@extend %extend_1;
+}
+ol {
+	@extend %extend_1;
+	list-style: none;
+}
+ul {
+	@extend %extend_1;
+	list-style: none;
+}
+li {
+	@extend %extend_1;
+}
+fieldset {
+	@extend %extend_1;
+}
+form {
+	@extend %extend_1;
+}
+label {
+	@extend %extend_1;
+}
+legend {
+	@extend %extend_1;
+}
+table {
+	@extend %extend_1;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption {
+	@extend %extend_1;
+}
+tbody {
+	@extend %extend_1;
+}
+tfoot {
+	@extend %extend_1;
+}
+thead {
+	@extend %extend_1;
+}
+tr {
+	@extend %extend_1;
+}
+th {
+	@extend %extend_1;
+}
+td {
+	@extend %extend_1;
+}
+article {
+	@extend %extend_1;
+	display: block;
+}
+aside {
+	@extend %extend_1;
+	display: block;
+}
+canvas {
+	@extend %extend_1;
+}
+details {
+	@extend %extend_1;
+	display: block;
+}
+embed {
+	@extend %extend_1;
+}
+figure {
+	@extend %extend_1;
+	display: block;
+}
+figcaption {
+	@extend %extend_1;
+	display: block;
+}
+footer {
+	@extend %extend_1;
+	display: block;
+}
+header {
+	@extend %extend_1;
+	display: block;
+}
+hgroup {
+	@extend %extend_1;
+	display: block;
+}
+menu {
+	@extend %extend_1;
+	display: block;
+}
+nav {
+	@extend %extend_1;
+	display: block;
+}
+output {
+	@extend %extend_1;
+}
+ruby {
+	@extend %extend_1;
+}
+section {
+	@extend %extend_1;
+	display: block;
+}
+summary {
+	@extend %extend_1;
+}
+time {
+	@extend %extend_1;
+}
+mark {
+	@extend %extend_1;
+}
+audio {
+	@extend %extend_1;
+}
+video {
+	@extend %extend_1;
+}
+#sequence {
+	position: relative;
+	min-height: 600px;
+	max-width: 1400px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: $font_0, $font_1;
+	.sequence-next {
+		@extend %extend_2;
+		right: 40px;
+		&:hover {
+			@extend %extend_3;
+		}
+	}
+	.sequence-prev {
+		@extend %extend_2;
+		right: 100px;
+		&:hover {
+			@extend %extend_3;
+		}
+	}
+	h2 {
+		font-size: 1.5em;
+		line-height: 1.2em;
+	}
+	.info {
+		color: $black;
+		font-size: 1em;
+		right: 150%;
+		line-height: 1.2em;
+		top: 170px;
+		width: 50%;
+		z-index: 10;
+		vertical-align: middle;
+		//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 4s;
+		//Instead of the line below you could use @includetransition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: right;
+	}
+	.animate-in {
+		.info {
+			right: 15%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.info_thinking {
+			right: 15%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.info_thinking_content {
+			right: 15%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.me {
+			left: 10%;
+			top: 70px;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+			z-index: 4;
+		}
+		.me_thinking {
+			left: 3%;
+			top: 70px;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+			z-index: 4;
+		}
+	}
+	.animate-out {
+		.info {
+			right: -150%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.info_thinking {
+			right: -150%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.info_thinking_content {
+			right: -150%;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.me {
+			left: 140%;
+			top: -30px;
+			z-index: 2;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+		.me_thinking {
+			left: 140%;
+			top: -30px;
+			z-index: 2;
+			//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 4s;
+		}
+	}
+	.info_thinking {
+		color: $color_blue_approx;
+		font-size: 1em;
+		right: 150%;
+		line-height: 1.2em;
+		top: 170px;
+		width: 80%;
+		z-index: 10;
+		vertical-align: middle;
+		//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 4s;
+		//Instead of the line below you could use @includetransition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: right;
+	}
+	.info_thinking_content {
+		color: $black;
+		font-size: 1em;
+		right: 150%;
+		line-height: 1.2em;
+		top: 200px;
+		width: 40%;
+		z-index: 10;
+		vertical-align: middle;
+		//Instead of the line below you could use @includetransition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 4s;
+		//Instead of the line below you could use @includetransition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: right;
+	}
+	.me {
+		left: -140%;
+		top: 200px;
+		max-width: 23%;
+		z-index: 6;
+		//Instead of the line below you could use @includetransition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: left top;
+	}
+	.me_thinking {
+		left: -80%;
+		top: 200px;
+		max-width: 50%;
+		z-index: 6;
+		//Instead of the line below you could use @includetransition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: left top;
+	}
+	.socialIcons {
+		padding-top: 90px;
+	}
+	.socialIcon {
+		margin-right: 10px;
+		opacity: 0.4;
+		&:hover {
+			opacity: .8;
+			filter: alpha(opacity=80);
+		}
+	}
+	> .sequence-canvas {
+		height: 100%;
+		width: 100%;
+		> li {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+		li > * {
+			position: absolute;
+			//Instead of the line below you could use @includetransition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+		}
+	}
 }
