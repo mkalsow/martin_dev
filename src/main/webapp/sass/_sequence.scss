@@ -1,0 +1,148 @@
+#sequence {
+	position: relative;
+	min-height: 600px;
+	max-width: 1400px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: $font_0, $font_1;
+	.sequence-next {
+		@extend %extend_2;
+		top: 200px;
+		@include susy-breakpoint($bp-medium, $susy) {
+            top: 400px;
+        }
+		right: 40px;
+		&:hover {
+			@extend %extend_3;
+		}
+	}
+	.sequence-prev {
+		@extend %extend_2;
+		top: 200px;
+            @include susy-breakpoint($bp-medium, $susy) {
+                top: 400px;
+            }
+		right: 105px;
+		&:hover {
+			@extend %extend_3;
+		}
+	}
+	h2 {
+		font-size: 1.5em;
+		line-height: 1.2em;
+	}
+	> .sequence-canvas {
+		height: 100%;
+		width: 100%;
+		> li {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+		li > * {
+			position: absolute;
+			transition-timing-function: ease-in-out;
+		}
+	}
+
+	.socialIcons {
+	    @include span(10 of 12 last);
+            @include susy-breakpoint($bp-medium, $susy) {
+                @include span(5 of 12);
+                    font-size: 1em;
+                    line-height: 1.2em;
+                    top: 260px;
+            }
+                top: 280px;
+                right: 140%;
+                z-index: 10;
+                vertical-align: middle;
+                transition-duration: 4s;
+                transition-property: right;
+	}
+	.socialIcon {
+		margin-right: 10px;
+		opacity: 0.4;
+		&:hover {
+			opacity: .8;
+			filter: alpha(opacity=80);
+		}
+	}
+   .animate-in {
+       .socialIcons{
+ 		    right: 1%;
+ 		     @include susy-breakpoint($bp-medium, $susy) {
+                right: 8%;
+             }
+      	    transition-duration: 4s;
+       		}
+       	}
+   .animate-out {
+      .socialIcons{
+        right: -140%;
+        transition-duration: 4s;
+        }
+   }
+
+	.me_image{
+	    @include span(5 of 12 first);
+	        @include susy-breakpoint($bp-medium, $susy) {
+              @include span(4 of 12 first);
+            }
+	    left: -140%;
+   		z-index: 6;
+   		transition-property: left top;
+	}
+    .animate-in {
+
+		.me_image{
+			left: 10%;
+            transition-duration: 4s;
+        	z-index: 4;
+		}
+	}
+	.animate-out {
+		.me_image{
+		left: 140%;
+        			z-index: 2;
+        			transition-duration: 4s;
+
+		}
+	}
+
+    .me_text{
+        @include span(6 of 12 last);
+        @include susy-breakpoint($bp-medium, $susy) {
+            @include span(5 of 12 last);
+            font-size: 1em;
+            line-height: 1.2em;
+            top: 120px;
+        }
+        top: 30px;
+ 	    color: $black;
+        font-size: 0.7em;
+        right: 150%;
+        z-index: 10;
+        vertical-align: middle;
+        transition-duration: 4s;
+        transition-property: right;
+    }
+
+    	.animate-in {
+    		.me_text{
+    		    right: 2%;
+   			    transition-duration: 4s;
+   			     @include susy-breakpoint($bp-medium, $susy) {
+   			      right: 10%;
+   			     }
+    		}
+    	}
+    	.animate-out {
+            .me_text{
+                right: -150%;
+                transition-duration: 4s;
+      		}
+        }
+}

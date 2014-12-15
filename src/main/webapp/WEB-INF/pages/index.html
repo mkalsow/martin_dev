@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-    <title>Sequence Theme Demo - Sliding Horizontal Parallax</title>
+    <title>Welcome on kalsow.expert</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="../generatedCss/test.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../generatedCss/my.css"/>
     <script>
 		 if (typeof jQuery == 'undefined'){
 		    document.write(unescape('%3Cscript src="scripts/jquery-min.js" %3E%3C/script%3E'));
 		 }
+
+
 
 
     </script>
@@ -18,60 +20,52 @@
 </head>
 <body>
 <div id="sequence">
-    <img class="sequence-prev" src="images/bt-prev.png" alt="Previous"/>
-    <img class="sequence-next" src="images/bt-next.png" alt="Next"/>
+    <div class="sidebar">
+        <img class="sequence-prev" src="images/bt-prev.png" alt="Previous"/>
+        <img class="sequence-next" src="images/bt-next.png" alt="Next"/>
 
-
-    <ul class="sequence-canvas">
+    </div>
+    <ul class="content sequence-canvas">
         <li class="animate-in">
-
-            <div class="info">
+            <div class="me_text">
                 <h2>Hi There. I´m Martin Kalsow</h2>
 
                 <p>I'm a software engineer and architect based in Hamburg, Germany.</p>
-
-                <div class="socialIcons">
-                    <a class="socialIcon" href="https://www.xing.com/profile/Martin_Kalsow?sc_o=mxb_p"
-                       target="_blank" title="see me on xing" alt="xing icon"><img src="images/xing.png"/></a>
-                    <a class="socialIcon" href="https://twitter.com/martinkalsow" target="_blank"
-                       title="Follow me on Twitter"
-                       alt="twitter icon"><img src="images/twitter.png"/></a>
-                    <a class="socialIcon" href="https://www.facebook.com/martin.kalsow" target="_blank"
-                       title="See me on Facebook"
-                       alt="facebook icon"><img src="images/facebook.png"/></a>
-                </div>
             </div>
-            <img class="me" src="images/me_looking_grey.png" alt="me"/>
-
-
+            <div class="socialIcons">
+                <a class="socialIcon" href="https://www.xing.com/profile/Martin_Kalsow?sc_o=mxb_p"
+                   target="_blank" title="see me on xing" alt="xing icon"><img src="images/xing.png"/></a>
+                <a class="socialIcon" href="https://twitter.com/martinkalsow" target="_blank"
+                   title="Follow me on Twitter"
+                   alt="twitter icon"><img src="images/twitter.png"/></a>
+                <a class="socialIcon" href="https://www.facebook.com/martin.kalsow" target="_blank"
+                   title="See me on Facebook"
+                   alt="facebook icon"><img src="images/facebook.png"/></a>
+            </div>
+            <img class="me_image" src="images/me_looking_grey.png" alt="me_thinking"/>
         </li>
 
         <li>
-            <div class="info_thinking">
+            <div class="me_text">
                 <h2>Knowledge</h2>
 
-                <p></p>
-            </div>
-            <div class="info_thinking_content">
-                <h2>i can all, Java...</h2>
-
-                <p>verteilte umgebungen
-                    shared nothing architekturen
-                    esb middleware archtikturen (mal googlen)
-                    ecommerce
-                    enterprise architrkuten
+                <p>Java, Enterprise Java Architecture, Microservices, Distributed Environments,
+                    Shared Nothing Architecture, SOA, ESB, Message Oriented Middleware, eCommerce
                 </p>
             </div>
-            <img class="me_thinking" src="images/me_thinking_gray.png" alt="me_thinking"/>
+            <img class="me_image" src="images/me_thinking_gray.png" alt="me_thinking"/>
         </li>
+
         <li>
-            <div class="info">
+            <div class="me_text">
                 <h2>Blog</h2>
 
-                <p></p>
+                <p>ksld</p>
             </div>
-            <img class="me_thinking" src="images/me_thinking_gray.png" alt="me_thinking"/>
+            <img class="me_image" src="images/me_thinking_gray.png" alt="me_thinking"/>
         </li>
+
+
     </ul>
 </div>
 </body>
