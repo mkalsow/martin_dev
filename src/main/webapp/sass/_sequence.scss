@@ -1,7 +1,7 @@
 #sequence {
 	position: relative;
 	min-height: 600px;
-	max-width: 1400px;
+	max-width: 192000px;
 	min-width: 320px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -9,8 +9,12 @@
 	.sequence-next {
 		@extend %extend_2;
 		top: 200px;
+		height: 43px;
+        width: 41px;
 		@include susy-breakpoint($bp-medium, $susy) {
             top: 400px;
+            height: 50px;
+            width: 48px;
         }
 		right: 40px;
 		&:hover {
@@ -20,14 +24,34 @@
 	.sequence-prev {
 		@extend %extend_2;
 		top: 200px;
-            @include susy-breakpoint($bp-medium, $susy) {
+		height: 43px;
+        width: 41px;
+        @include susy-breakpoint($bp-medium, $susy) {
                 top: 400px;
-            }
+                height: 50px;
+                width: 48px;
+        }
 		right: 105px;
 		&:hover {
 			@extend %extend_3;
 		}
 	}
+	.impressum {
+    	position: absolute;
+        opacity: 0.4;
+       	height: 35px;
+       	width: 80px;
+       	z-index: 20;
+       	transition-duration: 1s;
+        top: 260px;
+        @include susy-breakpoint($bp-medium, $susy) {
+            top: 480px;
+        }
+        right: 40px;
+        &:hover {
+    		@extend %extend_3;
+   		}
+    }
 	h2 {
 		font-size: 1.6em;
 		line-height: 1.2em;
@@ -59,7 +83,7 @@
                 right: 140%;
                 z-index: 10;
                 vertical-align: middle;
-                transition-duration: 4s;
+                transition-duration: 6s;
                 transition-property: right;
 	}
 	.socialIcon {
@@ -76,13 +100,13 @@
  		     @include susy-breakpoint($bp-medium, $susy) {
                 right: 8%;
              }
-      	    transition-duration: 4s;
+      	    transition-duration: 6s;
        		}
        	}
    .animate-out {
       .socialIcons{
         right: -140%;
-        transition-duration: 4s;
+        transition-duration: 6s;
         }
    }
 
@@ -98,8 +122,8 @@
     .animate-in {
 
 		.me_image{
-			left: 8%;
-            transition-duration: 4s;
+			left: 3%;
+            transition-duration: 6s;
         	z-index: 4;
 		}
 	}
@@ -107,7 +131,7 @@
 		.me_image{
 		left: 140%;
         			z-index: 2;
-        			transition-duration: 4s;
+        			transition-duration: 6s;
 
 		}
 	}
@@ -115,25 +139,25 @@
     .me_text{
         @include span(6 of 12 last);
         @include susy-breakpoint($bp-medium, $susy) {
-            @include span(5 of 12 last);
             font-size: 1.3em;
             line-height: 1.2em;
-            top: 120px;
+            top: 100px;
         }
         top: 30px;
- 	    color: $black;
+ 	    color: $gray;
         font-size: 0.8em;
         right: 150%;
+        margin-right: 5px;
         z-index: 10;
         vertical-align: middle;
-        transition-duration: 4s;
+        transition-duration: 6s;
         transition-property: right;
     }
 
     	.animate-in {
     		.me_text{
     		    right: 2%;
-   			    transition-duration: 4s;
+   			    transition-duration: 6s;
    			     @include susy-breakpoint($bp-medium, $susy) {
    			      right: 10%;
    			     }
@@ -142,7 +166,7 @@
     	.animate-out {
             .me_text{
                 right: -150%;
-                transition-duration: 4s;
+                transition-duration: 6s;
       		}
         }
 }

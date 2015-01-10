@@ -19,10 +19,8 @@
 	font-weight: bold;
 	position: absolute;
 	opacity: 0.4;
-	height: 50px;
-	width: 48px;
 	z-index: 20;
-	transition-duration: 0.4s;
+	transition-duration: 1s;
 }
 
 //original selectors
@@ -30,7 +28,7 @@
 %extend_3 {
 	opacity: 1;
 	transform: scale(1.2);
-	transition-duration: 0.4s;
+	transition-duration: 1s;
 }
 
 
