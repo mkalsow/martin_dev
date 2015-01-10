@@ -1,0 +1,288 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  font-size: 98%;
+  font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+  vertical-align: baseline;
+}
+
+#sequence .sequence-next, #sequence .sequence-prev {
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 120px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 20;
+  transition-duration: 1s;
+}
+
+#sequence .sequence-next:hover, #sequence .sequence-prev:hover, #sequence .impressum:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+body {
+  line-height: 1;
+  background-color: white;
+}
+
+blockquote {
+  quotes: none;
+}
+blockquote:before {
+  content: none;
+}
+blockquote:after {
+  content: none;
+}
+
+q {
+  quotes: none;
+}
+q:before {
+  content: none;
+}
+q:after {
+  content: none;
+}
+
+ol {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article {
+  display: block;
+}
+
+aside {
+  display: block;
+}
+
+details {
+  display: block;
+}
+
+figure {
+  display: block;
+}
+
+figcaption {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+header {
+  display: block;
+}
+
+hgroup {
+  display: block;
+}
+
+menu {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+#sequence {
+  position: relative;
+  min-height: 600px;
+  max-width: 192000px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: Play, sans-serif;
+}
+#sequence .sequence-next {
+  top: 200px;
+  height: 43px;
+  width: 41px;
+  right: 40px;
+}
+@media (min-width: 32em) {
+  #sequence .sequence-next {
+    top: 400px;
+    height: 50px;
+    width: 48px;
+  }
+}
+#sequence .sequence-prev {
+  top: 200px;
+  height: 43px;
+  width: 41px;
+  right: 105px;
+}
+@media (min-width: 32em) {
+  #sequence .sequence-prev {
+    top: 400px;
+    height: 50px;
+    width: 48px;
+  }
+}
+#sequence .impressum {
+  position: absolute;
+  opacity: 0.4;
+  height: 35px;
+  width: 80px;
+  z-index: 20;
+  transition-duration: 1s;
+  top: 260px;
+  right: 40px;
+}
+@media (min-width: 32em) {
+  #sequence .impressum {
+    top: 480px;
+  }
+}
+#sequence h2 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+#sequence > .sequence-canvas {
+  height: 100%;
+  width: 100%;
+}
+#sequence > .sequence-canvas > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#sequence > .sequence-canvas li > * {
+  position: absolute;
+  transition-timing-function: ease-in-out;
+}
+#sequence .socialIcons {
+  width: 83.05085%;
+  float: right;
+  margin-right: 0;
+  top: 290px;
+  right: 140%;
+  z-index: 10;
+  vertical-align: middle;
+  transition-duration: 6s;
+  transition-property: right;
+}
+@media (min-width: 32em) {
+  #sequence .socialIcons {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+    font-size: 1em;
+    line-height: 1.2em;
+    top: 320px;
+  }
+}
+#sequence .socialIcon {
+  margin-right: 10px;
+  opacity: 0.4;
+}
+#sequence .socialIcon:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+}
+#sequence .animate-in .socialIcons {
+  right: 1%;
+  transition-duration: 6s;
+}
+@media (min-width: 32em) {
+  #sequence .animate-in .socialIcons {
+    right: 8%;
+  }
+}
+#sequence .animate-out .socialIcons {
+  right: -140%;
+  transition-duration: 6s;
+}
+#sequence .me_image {
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  left: -140%;
+  z-index: 6;
+  transition-property: left top;
+}
+@media (min-width: 32em) {
+  #sequence .me_image {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+#sequence .animate-in .me_image {
+  left: 3%;
+  transition-duration: 6s;
+  z-index: 4;
+}
+#sequence .animate-out .me_image {
+  left: 140%;
+  z-index: 2;
+  transition-duration: 6s;
+}
+#sequence .me_text {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  top: 30px;
+  color: gray;
+  font-size: 0.8em;
+  right: 150%;
+  margin-right: 5px;
+  z-index: 10;
+  vertical-align: middle;
+  transition-duration: 6s;
+  transition-property: right;
+}
+@media (min-width: 32em) {
+  #sequence .me_text {
+    font-size: 1.3em;
+    line-height: 1.2em;
+    top: 100px;
+  }
+}
+#sequence .animate-in .me_text {
+  right: 2%;
+  transition-duration: 6s;
+}
+@media (min-width: 32em) {
+  #sequence .animate-in .me_text {
+    right: 10%;
+  }
+}
+#sequence .animate-out .me_text {
+  right: -150%;
+  transition-duration: 6s;
+}
+
+#sequence .content {
+  width: 66.26506%;
+  float: left;
+  margin-right: 1.20482%;
+}
+#sequence .sidebar {
+  width: 32.53012%;
+  float: right;
+  margin-right: 0;
+}

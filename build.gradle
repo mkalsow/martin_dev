@@ -41,7 +41,7 @@ dependencies {
 }
 
 compass {
-    cssDir = file('src/main/webapp/generatedCss')
+    cssDir = file('src/main/webapp/css')
     sassDir = file('src/main/webapp/sass')
 
     gems = ["compass:1.0.0.alpha.18", "susy", "breakpoint"]
