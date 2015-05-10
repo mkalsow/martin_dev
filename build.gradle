@@ -24,7 +24,7 @@ version = '1.0'
 
 
 war {
-    baseName = 'martin_dev'
+    baseName = 'kalsowExpert'
     version = '0.1'
 }
 
@@ -36,8 +36,8 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.0.2.RELEASE")
-    //Required dependency for JSP
-    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    //For tomcat
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 compass {

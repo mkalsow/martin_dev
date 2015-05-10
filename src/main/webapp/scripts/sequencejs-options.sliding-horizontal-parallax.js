@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var options = {
-        autoPlay: true,
-        autoPlayDelay: 4000,
+        autoPlay: false,
+        autoPlayDelay: 500,
         nextButton: true,
         prevButton: true,
         preloader: true,
@@ -10,6 +10,6 @@ $(document).ready(function(){
     var sequence = $("#sequence").sequence(options).data("sequence");
 
     sequence.afterLoaded = function(){
-        $(".sequence-prev, .sequence-next").fadeIn(500);
+        $(".sequence-prev, .sequence-next").fadeIn(0);
     }
 });

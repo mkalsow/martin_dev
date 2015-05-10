@@ -1,37 +1,39 @@
 #sequence {
 	position: relative;
 	min-height: 600px;
-	max-width: 192000px;
+	max-width: 1920px;
 	min-width: 320px;
 	margin: 0 auto;
 	overflow: hidden;
 	font-family: $font_0, $font_1;
 	.sequence-next {
 		@extend %extend_2;
-		top: 200px;
-		height: 43px;
-        width: 41px;
+		top: 300px;
+		height: 46px;
+        width: 46px;
 		@include susy-breakpoint($bp-medium, $susy) {
             top: 400px;
             height: 50px;
             width: 48px;
+            right: 50px;
         }
-		right: 40px;
+		right: 20px;
 		&:hover {
 			@extend %extend_3;
 		}
 	}
 	.sequence-prev {
 		@extend %extend_2;
-		top: 200px;
-		height: 43px;
-        width: 41px;
+		top: 300px;
+		height: 46px;
+        width: 46px;
         @include susy-breakpoint($bp-medium, $susy) {
                 top: 400px;
                 height: 50px;
                 width: 48px;
+                right: 113px;
         }
-		right: 105px;
+		right: 93px;
 		&:hover {
 			@extend %extend_3;
 		}
@@ -40,14 +42,16 @@
     	position: absolute;
         opacity: 0.4;
        	height: 35px;
-       	width: 80px;
+       	width: 120px;
        	z-index: 20;
        	transition-duration: 1s;
-        top: 260px;
+        top: 370px;
         @include susy-breakpoint($bp-medium, $susy) {
             top: 480px;
+            right: 40px;
+            width: 80px;
         }
-        right: 40px;
+        right: 20px;
         &:hover {
     		@extend %extend_3;
    		}
@@ -79,7 +83,7 @@
                     line-height: 1.2em;
                     top: 320px;
             }
-                top: 290px;
+                top: 400px;
                 right: 140%;
                 z-index: 10;
                 vertical-align: middle;
@@ -111,18 +115,21 @@
    }
 
 	.me_image{
-	    @include span(5 of 12 first);
+	     width: 50%;
 	        @include susy-breakpoint($bp-medium, $susy) {
               @include span(4 of 12 first);
             }
 	    left: -140%;
    		z-index: 6;
-   		transition-property: left top;
+   		transition-property: left;
 	}
     .animate-in {
 
 		.me_image{
-			left: 3%;
+			left: 0%;
+			 @include susy-breakpoint($bp-medium, $susy) {
+                left: 6%;
+             }
             transition-duration: 6s;
         	z-index: 4;
 		}
@@ -136,14 +143,43 @@
 		}
 	}
 
+	.me_image_big{
+    	     width: 65%;
+    	        @include susy-breakpoint($bp-medium, $susy) {
+                  width: 50%;
+                }
+    	    left: -140%;
+       		z-index: 6;
+       		transition-property: left;
+    	}
+        .animate-in {
+
+    		.me_image_big{
+    			left: 0%;
+    			 @include susy-breakpoint($bp-medium, $susy) {
+                    left: 6%;
+                 }
+                transition-duration: 6s;
+            	z-index: 4;
+    		}
+    	}
+    	.animate-out {
+    		.me_image_big{
+    		left: 140%;
+            			z-index: 2;
+            			transition-duration: 6s;
+
+    		}
+    	}
+
     .me_text{
-        @include span(6 of 12 last);
+        width: 50%;
         @include susy-breakpoint($bp-medium, $susy) {
             font-size: 1.3em;
             line-height: 1.2em;
-            top: 100px;
+            top: 70px;
         }
-        top: 30px;
+        top: 25px;
  	    color: $gray;
         font-size: 0.8em;
         right: 150%;
@@ -169,4 +205,39 @@
                 transition-duration: 6s;
       		}
         }
+
+        .me_text_down{
+                width: 40%;
+                @include susy-breakpoint($bp-medium, $susy) {
+                    font-size: 1.3em;
+                    line-height: 1.2em;
+                    top: 100px;
+                    width: 30%;
+                }
+                top: 140px;
+         	    color: $gray;
+                font-size: 0.8em;
+                right: 150%;
+                margin-right: 5px;
+                z-index: 10;
+                vertical-align: middle;
+                transition-duration: 6s;
+                transition-property: right;
+            }
+
+            	.animate-in {
+            		.me_text_down{
+            		    right: 2%;
+           			    transition-duration: 6s;
+           			     @include susy-breakpoint($bp-medium, $susy) {
+           			      right: 10%;
+           			     }
+            		}
+            	}
+            	.animate-out {
+                    .me_text_down{
+                        right: -150%;
+                        transition-duration: 6s;
+              		}
+                }
 }
